@@ -3,6 +3,7 @@ import axios from "axios";
 import UserCard from "../../components/UserCard/UserCard";
 import { Link } from "react-router-dom";
 
+const backendUrl = 'https://users-app-server-4hg6ekittq-ew.a.run.app';
 
 function UsersDatabase() {
   const [users, setUsers] = useState([]);
@@ -13,7 +14,7 @@ function UsersDatabase() {
 
   const getUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/users");
+      const response = await axios.get(`${backendUrl}/api/users`);
       setUsers(response.data);
     } catch (error) {
       console.error(error);

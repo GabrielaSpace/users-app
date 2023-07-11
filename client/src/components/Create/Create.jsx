@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+const backendUrl = 'https://users-app-server-4hg6ekittq-ew.a.run.app';
+
 function Create() {
   const [id, setId] = useState("");
   const [name, setName] = useState("");
@@ -18,8 +20,7 @@ function Create() {
     };
 
     try {
-      const response = await axios.post(
-        "http://localhost:3000/api/users/create",
+      const response = await axios.post(`${backendUrl}/api/users/create`,
         newUser
       );
       console.log("Usuario creado exitosamente");
