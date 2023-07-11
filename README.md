@@ -1,4 +1,4 @@
-# users-app
+# users-app :information_desk_person::bow:
 
 # Creación de usuarios con MERN Full Stack
 
@@ -25,7 +25,7 @@ Node.js: Entorno de ejecución de JavaScript utilizado para construir el backend
 Instrucciones de instalación
 Para instalar y ejecutar este proyecto en tu entorno local, sigue estos pasos:
 
-Clona el repositorio en tu entorno local:
+Clona o haz un fork del repositorio en tu entorno local:
 
     git clone https://github.com/GabrielaSpace/users-app.git
 
@@ -33,30 +33,9 @@ Instala las dependencias necesarias:
 
     npm install
 
-Inicia la aplicación:
 
-    npm start
+La aplicación tiene un server y un client. 
 
-
-
-La aplicación tiene un server y un client 
-
-
-## Endpoints generales de la aplicación:
-
-
-
-Home:
-
-    http://localhost:5173/
-
-Register:
-
-    http://localhost:5173/register
-
-Database
-
-    http://localhost:5173/database
 
 
 
@@ -97,39 +76,6 @@ Sigue estos pasos para instalar y ejecutar el servidor:
     El servidor estará disponible en [http://localhost:3000](http://localhost:3000/).
     
 
-### Endpoints del servidor
-
-
-La API de Usuarios proporciona las siguientes rutas para operaciones relacionadas con usuarios. Todas las rutas se basan en el puerto del servidor en el que se ejecuta el servidor. 
-
-### Obtener Usuarios de la Base de Datos
-
--   Método: GET
--   Ruta: `http://localhost:3000/api/users`
--   Descripción: Obtiene la lista de usuarios almacenados en la base de datos.
--   Respuesta Exitosa (Código 200): Retorna la lista de usuarios.
-
-
-
-### Crear un Nuevo Usuario
-
--   Método: POST
--   Ruta: `http://localhost:3000/api/users/create`
--   Descripción: Crea un nuevo usuario en la base de datos.
--   Respuesta Exitosa (Código 200): Retorna una respuesta exitosa después de crear el usuario.
-
-### Obtener un Usuario por ID
-
--   Método: GET
--   Ruta: `http://localhost:3000/api/users/{id}`
--   Descripción: Obtiene un usuario específico de la base de datos según su ID.
--   Parámetros:
-    -   `id` (ruta): ID del usuario a obtener.
--   Respuesta Exitosa (Código 200): Retorna el usuario encontrado.
-
-	Es importante mencionar que para probar estos endpoints y su funcionalidad, puedes utilizar una herramienta como Postman, que te permite enviar solicitudes HTTP y ver las respuestas correspondientes.
-
-Recuerda que, para poder utilizar estos endpoints, debes tener una base de datos MongoDB configurada y funcionando correctamente.
 
 ### Creación de la base de datos 
 
@@ -169,16 +115,85 @@ Reemplaza `<cadena de conexión de MongoDB Atlas>` con la cadena de conexión qu
 
 Una vez que hayas configurado el archivo `.env` con la cadena de conexión correcta, podrás usar esta variable de entorno para establecer la conexión con tu base de datos MongoDB Atlas en tu aplicación de servidor.
 
+### Endpoints del servidor
 
-## Client 
+
+La API de Usuarios proporciona las siguientes rutas para operaciones relacionadas con usuarios. Todas las rutas se basan en el puerto del servidor en el que se ejecuta el servidor. 
+
+#### Obtener Usuarios de la Base de Datos :mag:
+
+-   Método: GET
+-   Ruta: `http://localhost:3000/api/users`
+-   Descripción: Obtiene la lista de usuarios almacenados en la base de datos.
+-   Respuesta Exitosa (Código 200): Retorna la lista de usuarios.
+
+#### Crear un Nuevo Usuario :heavy_plus_sign::bust_in_silhouette:
+
+-   Método: POST
+-   Ruta: `http://localhost:3000/api/users/create`
+-   Descripción: Crea un nuevo usuario en la base de datos.
+-   Respuesta Exitosa (Código 200): Retorna una respuesta exitosa después de crear el usuario.
+
+#### Obtener un Usuario por ID :page_facing_up:
+
+-   Método: GET
+-   Ruta: `http://localhost:3000/api/users/{id}`
+-   Descripción: Obtiene un usuario específico de la base de datos según su ID.
+-   Parámetros:
+    -   `id` (ruta): ID del usuario a obtener.
+-   Respuesta Exitosa (Código 200): Retorna el usuario encontrado.
+
+	Es importante mencionar que para probar estos endpoints y su funcionalidad, puedes utilizar una herramienta como Postman, que te permite enviar solicitudes HTTP y ver las respuestas correspondientes.
+
+Recuerda que, para poder utilizar estos endpoints, debes tener una base de datos MongoDB configurada y funcionando correctamente.
+
+## Client
+
 Acá esta lo que ve el usuario y los endpoints relacionados a esta sección son los que aparecen al inicio (Endpoints generales de la aplicación). Acá podremos desde front agregar usuarios a nuestra base de datos de mongo.
 
 
-## contributions
+1.  Navega hasta el directorio del client:
+   
+    
+    `cd users-app/client` 
+    
+3.  Instala las dependencias necesarias:
 
-This project is open to contributions. If you would like to collaborate, please submit a pull request. Thanks for getting here. :heartpulse::wink: 
+    `npm install` 
+    
+4.  Inicia el servidor:
 
-## This project was done by:
+    `npm run dev` 
+    
 
 
-[Gabriela García](https://github.com/GabrielaSpace)
+
+#### Endpoints generales de la aplicación:
+
+
+Home:
+
+    http://localhost:5173/
+
+Register:
+
+    http://localhost:5173/register
+
+Database
+
+    http://localhost:5173/database
+
+
+
+
+Hasta acá todo está en local, ahora quiero subir todo a la nube y lo haré en los siguientes pasos.
+
+
+
+
+
+## Dockerización de la Aplicación 
+
+Sigue estos pasos para construir y ejecutar un contenedor Docker de la aplicación Users App:
+
+### Empezamos por el servidor
