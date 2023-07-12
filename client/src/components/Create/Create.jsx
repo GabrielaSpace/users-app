@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const backendUrl = 'https://users-app-server-4hg6ekittq-ew.a.run.app';
+
+const backendUrl = import.meta.env.VITE_API_URL;
 
 function Create() {
   const [id, setId] = useState("");
