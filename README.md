@@ -74,8 +74,7 @@ Sigue estos pasos para instalar y ejecutar el servidor:
     `npm start` 
     
     El servidor estará disponible en [http://localhost:3000](http://localhost:3000/). Sin ambargo, debes tener antes creada tu base de datos.
-    El servidor estará disponible en [http://localhost:3000](http://localhost:3000/). Sin ambargo, debes tener antes creada tu base de datos.
-    
+  
 
 
 ### Creación de la base de datos 
