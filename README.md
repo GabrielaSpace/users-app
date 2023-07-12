@@ -74,6 +74,7 @@ Sigue estos pasos para instalar y ejecutar el servidor:
     `npm start` 
     
     El servidor estará disponible en [http://localhost:3000](http://localhost:3000/). Sin ambargo, debes tener antes creada tu base de datos.
+    El servidor estará disponible en [http://localhost:3000](http://localhost:3000/). Sin ambargo, debes tener antes creada tu base de datos.
     
 
 
@@ -165,12 +166,9 @@ Acá esta lo que ve el usuario y los endpoints relacionados a esta sección son 
 
     `npm run dev` 
     
-En cliente también realicé un .env en la raiz del cliente
 
-> VITE_API_URL=http://localhost:3000/ 
 
 En esta parte como será en local la consulta colocamos eso completo en el .env
-
 
 #### Endpoints generales de la aplicación:
 
