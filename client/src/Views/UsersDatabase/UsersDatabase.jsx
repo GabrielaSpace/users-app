@@ -3,7 +3,8 @@ import axios from "axios";
 import UserCard from "../../components/UserCard/UserCard";
 import { Link } from "react-router-dom";
 
-const backendUrl = 'https://users-app-server-4hg6ekittq-ew.a.run.app';
+
+const backendUrl = import.meta.env.VITE_API_URL;
 
 function UsersDatabase() {
   const [users, setUsers] = useState([]);
